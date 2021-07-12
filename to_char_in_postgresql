@@ -1,0 +1,38 @@
+
+
+
+select localtimestamp;
+TO_CHAR(expression,format)
+--use to convert data into character format
+--use to convert date,timestamp,numeric value into a string
+-- the expression can be timestamp,an interval,an integer,double precision,or numeric value
+--is converted into string according to a specific format.
+--format is input format 
+--converting localtimestamp to char format
+--examples
+SELECT LOCALTIMESTAMP as "column_1",
+			TO_CHAR(LOCALTIMESTAMP,'YYYYMMDD') as "column_2",
+			TO_CHAR(LOCALTIMESTAMP,'YYYYDDMM') as "column_3",
+			TO_CHAR(LOCALTIMESTAMP,'YYYY-MM-DD') as "column_4",
+			TO_CHAR(LOCALTIMESTAMP,'MON/YYYY/DD') as "column_5",
+			TO_CHAR(LOCALTIMESTAMP,'DD,Month YYYY') as "column_6",
+			TO_CHAR(LOCALTIMESTAMP,'DDD,YYY') as "column_7";
+			
+SELECT LOCALTIMESTAMP,
+ 		TO_CHAR(LOCALTIMESTAMP,'YYYY') as "column_2",
+		TO_CHAR(LOCALTIMESTAMP,'Month') as "column_3",
+		TO_CHAR(LOCALTIMESTAMP,'Day') as "column_4";
+--extracting hour in 24 format,minute and second from timestamp
+SELECT LOCALTIMESTAMP,
+		TO_CHAR(LOCALTIMESTAMP,'HH24') as "column_2",
+		TO_CHAR(LOCALTIMESTAMP,'MI') as "column_3",
+		TO_CHAR(LOCALTIMESTAMP,'SS') as "column_4";
+		
+--number into comma separated number
+--here 9 represent any digit dont confuse with number 9
+--here D represent DECIMAL
+
+SELECT TO_CHAR(1234,'9,999') as "column_1",
+		TO_CHAR(1234,'$9,9999') as "column_2",
+		TO_CHAR(1234,'$9,999D99') as "column_3",
+		TO_CHAR(12345678,'$9,9999999D99') as "column_4";
