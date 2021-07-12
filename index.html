@@ -1,0 +1,75 @@
+<h1>
+git and github command 
+
+Basic command
+1. mkdir - to make a directory 
+example:  mkdir website -created a directory name website
+2. ls -la -to check what is inside the directory
+example ls -la 
+ output :  total 12
+drwxr-xr-x 1 student 197121 0 Jul 12 16:07 ./
+drwxr-xr-x 1 student 197121 0 Jul 12 16:07 ../
+-This shows nothing is in the directory
+3. clone -means copy 
+ example :
+   git clone https://github.com/nsirkhan/example-repo.git
+4. ls -la
+ output:  total 12
+        drwxr-xr-x 1 student 197121 0 Jul 12 16:14 ./
+        drwxr-xr-x 1 student 197121 0 Jul 12 16:07 ../
+        drwxr-xr-x 1 student 197121 0 Jul 12 16:14 example-repo/
+5 . ctrl+l  - to clear command from terminal
+6. cd example_repo/ - go to the directory example_repo
+7. ls -la  -checking directory contains
+  output :
+   		  total 4
+		drwxr-xr-x 1 student 197121 0 Jul 12 16:14 ./
+		drwxr-xr-x 1 student 197121 0 Jul 12 16:14 ../
+		drwxr-xr-x 1 student 197121 0 Jul 12 16:14 .git/
+8. make a text file in any editor .I am using Sublime and go the example_repo folder and create a file README.md
+ here README should be all in CAPS LOCK .Here .md mean makeup file
+after creating the README.md file ,your file will no see in  the github file .So check it using the command 
+9. git status - this command will output:
+  On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+--Means git will track any changes in the file but will no come in the github site.So we will need to commit the file
+in the github site.Git will know any changes you made by using the command git status.
+ So we will need to put the file in stagging so we type 
+10. git add README.md  --nothing will output to run this command means this command will put the file in stagging
+11. git status 
+   
+   On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+In order to put this put we need some message to know what will do this file .So we use -m "" ,here "" string means 
+what this file will do write inside the double quotation
+12. git commit -m "Initial commit"    -this will commit the file "README.md" in the reposity with message "Initial commit"
+   Until now,this file is in our house need to ship in your desire location ie remote so we will ship to desired location
+   using command 'git push origin master'  - push the file to desired location to see the file in remote github page 
+
+13. git push origin master    - look the repository first path in the url and master means index.html etc. After running this command
+       github will ask username/email and password to login in the github .After entered the username and password ,the file will be
+      get in the github repository .
+  -Whenever any file made change or creating file in our local computer will need to push by checking whether the file is push or not
+ using command 'git status'
+
+
+
+ 
+
+
+
+
+
+</h2>
