@@ -85,7 +85,45 @@ what this file will do write inside the double quotation
  15. git checkout README.md
 
 
+16. git log
+output:
 
+ commit af35deaba2a484b97d8c918c44f9f301193aaac4 (HEAD -> master, origin/master)
+Author: postgres <nasir.mycloud@gmail.com>
+Date:   Tue Jul 13 15:22:15 2021 +0530
+
+    some command
+
+commit d014c691ec716176e76141d8c940bebd400d7f9d
+Author: postgres <nasir.mycloud@gmail.com>
+Date:   Tue Jul 13 14:49:08 2021 +0530
+
+    warning of storage in github
+
+commit de7a2b1f93d133e7b7a3f53e21c110c7c356063c
+Author: postgres <nasir.mycloud@gmail.com>
+Date:   Mon Jul 12 17:34:50 2021 +0530
+
+    TO_CHAR in POSTGRESQL
+
+commit 5b37cb78e0267d1bf694894ecab6992ebab9772c
+Author: postgres <nasir.mycloud@gmail.com>
+Date:   Mon Jul 12 17:20:50 2021 +0530
+
+    Second commit
+
+commit c6ba4b37ce5db5def5753f8c2674f4c06a4c2ae4
+Author: postgres <nasir.mycloud@gmail.com>
+Date:   Mon Jul 12 16:45:21 2021 +0530
+
+    Initial commit
+
+
+note suppose i make some changes and push the file in the repository but due to changes pushed ,my website or code does not work .In this case we have to use git log and and take log hash and use the following command to return to the code previously work
+
+17 . git checkout af35deaba2a484b97d8c918c44f9f30119  -see the hash in step 16 log
+
+18. git checkout  master
 
 
  
